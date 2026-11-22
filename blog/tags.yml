@@ -9,3 +9,13 @@ docusaurus:
   label: Docusaurus
   permalink: /docusaurus
   description: Tulisan tentang Docusaurus
+
+lingkungan:
+  label: Lingkungan
+  permalink: /lingkungan
+  description: Tulisan tentang lingkungan dan konservasi
+
+trail-running:
+  label: Trail Running
+  permalink: /trail-running
+  description: Tulisan tentang trail running dan kegiatan lintas alam
