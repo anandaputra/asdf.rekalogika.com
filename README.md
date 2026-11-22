@@ -169,4 +169,10 @@ rsync -az --delete --chmod=D755,F644 -e "ssh -p <port>" \
 
 - Warna: `src/css/custom.css` (generator palet: https://docusaurus.io/docs/styling-layout)
 - Navbar, footer, mode terang/gelap, tema blok kode: `themeConfig` di `docusaurus.config.ts`
-- Logo & favicon: `static/img/logo.svg`
+- Judul, tagline: `title` dan `tagline` di `docusaurus.config.ts`
+- Logo navbar: `static/img/logo.svg` (logo Rekalogika); favicon: `static/img/favicon.ico`,
+  dibuat dari logo dengan:
+  `rsvg-convert -w 256 -h 256 static/img/logo.svg | magick - -define icon:auto-resize=48,32,16 static/img/favicon.ico`
+- Gambar preview media sosial: `static/img/social-card.png` (1200×630), sumbernya
+  `design/social-card.svg`. Setelah mengedit SVG, buat ulang dengan:
+  `rsvg-convert -w 1200 -h 630 design/social-card.svg -o static/img/social-card.png`
