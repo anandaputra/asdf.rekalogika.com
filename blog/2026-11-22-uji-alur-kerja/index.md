@@ -5,7 +5,6 @@ date: 2026-11-22T22:30:00+07:00
 authors: [ananda]
 tags: [umum]
 description: Artikel percobaan untuk menguji alur kerja dari laptop sampai tayang.
-draft: true
 ---
 
 Ini artikel percobaan untuk menguji alur kerja menulis.
