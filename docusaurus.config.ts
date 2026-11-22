@@ -16,6 +16,8 @@ const config: Config = {
 
   url: 'https://asdf.rekalogika.com',
   baseUrl: '/',
+  // Apache serves each page as <path>/index.html; use matching URLs to avoid redirects.
+  trailingSlash: true,
 
   onBrokenLinks: 'throw',
 
