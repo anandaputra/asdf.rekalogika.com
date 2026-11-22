@@ -7,55 +7,41 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'asdf.rekalogika.com',
   tagline: 'asdf.rekalogika.com',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
-  // Set the production url of your site here
   url: 'https://asdf.rekalogika.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'anandaputra', // Usually your GitHub org/user name.
-  projectName: 'asdf.rekalogika.com', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'id',
+    locales: ['id'],
   },
 
   presets: [
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/anandaputra/asdf.rekalogika.com/tree/main/',
-        },
+        // Blog-only mode: no docs, blog is served at the site root.
+        docs: false,
         blog: {
+          routeBasePath: '/',
+          blogTitle: 'Blog',
+          blogDescription: 'Tulisan di asdf.rekalogika.com',
+          blogSidebarTitle: 'Tulisan terbaru',
+          blogSidebarCount: 10,
+          postsPerPage: 10,
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/anandaputra/asdf.rekalogika.com/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -69,25 +55,20 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
     colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
       respectPrefersColorScheme: true,
     },
     navbar: {
       title: 'asdf.rekalogika.com',
       logo: {
-        alt: 'asdf.rekalogika.com Logo',
+        alt: 'Logo asdf.rekalogika.com',
         src: 'img/logo.svg',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/archive', label: 'Arsip', position: 'left'},
+        {to: '/tags', label: 'Tag', position: 'left'},
         {
           href: 'https://github.com/anandaputra/asdf.rekalogika.com',
           label: 'GitHub',
@@ -99,38 +80,22 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Blog',
           items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
+            {label: 'Arsip', to: '/archive'},
+            {label: 'Tag', to: '/tags'},
           ],
         },
         {
-          title: 'Community',
+          title: 'Langganan',
           items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
+            {label: 'RSS', href: 'https://asdf.rekalogika.com/rss.xml'},
+            {label: 'Atom', href: 'https://asdf.rekalogika.com/atom.xml'},
           ],
         },
         {
-          title: 'More',
+          title: 'Lainnya',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
             {
               label: 'GitHub',
               href: 'https://github.com/anandaputra/asdf.rekalogika.com',
@@ -138,7 +103,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Rekalogika. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Rekalogika. Dibuat dengan Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
