@@ -5,9 +5,9 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'asdf.rekalogika.com',
-  tagline: 'asdf.rekalogika.com',
-  favicon: 'img/logo.svg',
+  title: 'Blog Ananda',
+  tagline: 'Catatan teknis dan eksperimen Ananda Putra',
+  favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -35,7 +35,7 @@ const config: Config = {
         blog: {
           routeBasePath: '/',
           blogTitle: 'Blog',
-          blogDescription: 'Tulisan di asdf.rekalogika.com',
+          blogDescription: 'Catatan teknis dan eksperimen Ananda Putra',
           blogSidebarTitle: 'Tulisan terbaru',
           blogSidebarCount: 10,
           postsPerPage: 10,
@@ -57,15 +57,17 @@ const config: Config = {
   ],
 
   themeConfig: {
+    // Social card (og:image) — source: design/social-card.svg
+    image: 'img/social-card.png',
     colorMode: {
       defaultMode: 'light',
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'asdf.rekalogika.com',
+      title: 'Blog Ananda',
       logo: {
-        alt: 'Logo asdf.rekalogika.com',
+        alt: 'Logo Rekalogika',
         src: 'img/logo.svg',
       },
       items: [
