@@ -19,3 +19,13 @@ trail-running:
   label: Trail Running
   permalink: /trail-running
   description: Tulisan tentang trail running dan kegiatan lintas alam
+
+tata-kelola-it:
+  label: Tata Kelola IT
+  permalink: /tata-kelola-it
+  description: Tulisan tentang tata kelola, risiko, dan kepatuhan di dunia IT
+
+refleksi:
+  label: Refleksi
+  permalink: /refleksi
+  description: Catatan reflektif dan kritik terhadap diri sendiri
